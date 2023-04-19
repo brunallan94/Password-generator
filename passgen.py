@@ -11,9 +11,10 @@ numbers: int = 1234567890
 symbols: str = "!£$%^&*-+@#~<>?/.,"
     
 combine = uppercase + lowercase + str(numbers) + symbols
-length_of_string: str = input("Write your recommended length of password: ")
 
 if __name__ == "__main__":
+    length_of_string: str = input("Write your recommended length of password: ")
+
     password = "".join(random.sample(combine, int(length_of_string)))
     logging.info(f'Your password is: {password}')
     
